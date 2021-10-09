@@ -1,11 +1,23 @@
 const express = require("express");
 const app = express();
+const mongoose = require("mongoose");
+const db = require("./config/keys").mongoURI;
 
-// mongodb+srv://admin:<password>@mern.xiork.mongodb.net/myFirstDatabase?retryWrites=true&w=majority
+const users = require("./routes/api/users");
+const tweets = require("./routes/api/tweets");
+
+mongoose.connect(db, { useNewUrlParser: true})
+    .then(() => console.log("Connected to mongoDB"))
+    .catch(err => console.log(err));
 
 app.get("/", (req, res) => {
+    debugger;
+    console.log(res);
     res.send("Hello World!");
 });
+
+app.use("/api/users", users);
+app.use("/api/tweets", tweets);
 
 const port = process.env.PORT || 5000;
 
