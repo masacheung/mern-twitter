@@ -1,0 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+#tweets-container {
+  font-family: 'Lato', sans-serif;
+}
+
+#tweets-compose {
+  font-family: 'Lato', sans-serif;
+}
