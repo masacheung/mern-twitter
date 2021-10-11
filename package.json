@@ -1,8 +1,8 @@
 {
-  "name": "mern-twitter",
+  "name": "twitter-mern",
   "version": "1.0.0",
   "description": "",
-  "main": "app.js",
+  "main": "index.js",
   "scripts": {
     "server:debug": "nodemon --inspect app.js",
     "server": "nodemon app.js",
@@ -24,6 +24,7 @@
     "mongoose": "^6.0.10",
     "passport": "^0.5.0",
     "passport-jwt": "^4.0.0",
+    "react-redux": "^7.2.5",
     "validator": "^13.6.0"
   },
   "devDependencies": {
